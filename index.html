@@ -1,21 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yailup - Efficiency and productivity</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add styles for logo and navbar text color when body has 'scrolled' class */
+        body.scrolled .logo {
+            /* Change logo image when scrolled */
+            content: url('logo2.png');
+        }
+
+        body.scrolled .navbar a {
+            /* Change navbar text color when scrolled */
+            color: #888;
+        }
+    </style>
 </head>
 <body>
     <div class="banner">
         <div class="navbar">
             <img src="logo.png" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">What we do</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home" class="scroll-to-top">Home</a></li>
+                <li><a href="#about" class="scroll-down">About us</a></li>
+                <li><a href="#services" class="scroll-down">What we do</a></li>
+                <li><a href="#portfolio" class="scroll-down">Portfolio</a></li>
+                <li><a href="#contact" class="scroll-down">Contact</a></li>
             </ul>
         </div>
+    </div>
 
+    <div id="home" class="section">
         <div class="content">
             <h1>Efficiency and productivity for your business</h1>
             <p>Wanna know how? Click below and check it out!</p>
@@ -24,7 +41,14 @@
                 <button type="button"><span></span>CONTACT US</button>
             </div>
         </div>
-        
     </div>
+
+    <div id="about" class="section">
+        <h2>About Us</h2>
+        <p>Welcome to our company! </p>
+    </div>
+
+    <!-- Add other sections here -->  
+    <script src="script.js"></script> 
 </body>
 </html>
