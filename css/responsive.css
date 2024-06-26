@@ -1,0 +1,128 @@
+
+@media screen and (max-width: 1075px){
+    header .menu-desktop, header .btn-contato{
+        display: none;
+    }
+
+    header .btn-menu-mob{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .team-cards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .team-card{
+        width: 350px;
+        margin: 25px auto;
+    }   
+        
+}
+
+@media screen and (max-width: 900px){
+    /* Responsive hero */
+    .hero-site .txt-hero h1{
+        font-size: 2em;
+        line-height: 30px;
+    }
+
+    .hero-site .txt-hero p{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .hero-site .txt-hero p span{
+        display: inline;
+    }
+
+    .hero-site button{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    /* Content style */
+    .what-we-do .itens-container{
+        flex-direction: column;
+    }
+    
+    .what-we-do .itens-container .img-itens img{
+        mwidth: 100px;
+    }
+
+    .what-we-do .itens-container .txt-itens p{
+        margin-bottom: 20px;
+    }
+
+    /* .what-we-do, .itens-container .item1{ */
+
+    /* } */
+
+    /*Responsive Contact button style*/
+       .txt-contato, .icons-contato{
+        display: block;
+        width: 100%;
+    }
+
+    .contato .txt-contato h3{
+        font-size: 2em;
+        line-height: 40px;
+    }
+
+    .contato .icons-contato p{
+        margin-bottom: 20px;
+    }
+
+    .contato .icons-contato button{
+        width: 100%;
+    }
+
+    .contato .icons-contato button:hover{
+        background-color: #ffad7b;
+    }
+
+    .contato .icons-contato button i{
+        font-size: 25px;
+        color: #fff;
+    }
+
+    /* Portfolio style */
+      .portfolio h3{
+        font-size: 2em;
+        line-height: 40px;
+    }
+
+    .portfolio p{
+        margin: 20 px 0;
+        font-size: 16px;
+    }
+
+    /* section style-como */
+      .txt-como, .instrucoes{
+        display: block;
+        width: 100%;
+    }
+
+    .como .txt-como{
+        position: static;
+    }
+
+    .como .txt-como h3{
+        font-size: 3em;
+        line-height: 50px;
+    }
+
+    .instrucoes .instru-box{
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+    #rodape{
+        font-size: 14px;
+    }
+}
