@@ -445,6 +445,7 @@ section.what-we-do{
 section.contato{
     background-color: #ff914d;
     padding: 80px 0;
+    margin-bottom: 15px;
 }
 .txt-contato, .icons-contato{
     display: inline-block;
