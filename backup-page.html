@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_2.png">
+    
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Poppins: ital, wght@0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700;0,800;0,900;1,100;1,200; 1,300; 1,400;1,500; 1,600;1,700;1,800; 1,900&display=swap" rel="stylesheet">
+    <!--/Google fonts-->
+
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--/Bootstrap icons-->
+
+    <!--Scripts-->
+    <script src="js/script.js" defer></script>
+    <script src="js/btn-menu-mob.js" defer></script>
+    <!--/Scripts-->
+
+    <title>Yailup - Seu Negócio + Eficiente e Produtivo!</title>
+
+    <style>
+        body{
+            width: 100%;
+            height: auto;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.103)), url("images/bg-new.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+        }
+        .about h2{
+            font-size: 30px !important;
+        }
+        #menunav{
+            color: #053B49;
+        }
+        #trailbtn{
+            color: #ff914d;
+        }#trailbtn:hover{
+            color: #fff;
+        }
+        .kontainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #053B49;
+            font-weight: 350;
+            position:relative;
+            padding-top: 65px;
+            margin-top: 20px;
+        }
+
+        .kontainer .kard{
+            width: 250px;
+            height: auto;
+            padding: 2px 0;
+            text-align: center;
+            background-color: #053B49;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            transition: transform 0.5s;
+            padding-top: 10px;
+        }
+
+        .kontainer .kard:hover{
+            transform: scale(1.050);
+            background-color: #FF914D;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 30px #ffa46c;
+            color: #fff;
+        }
+
+        .kontainer .kard .kard-title{
+            padding: 20px 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        .kontainer .kard .kard-title h2{
+            font-size: 27px;
+            padding-bottom: 5px;
+            color: #fff;            
+        }
+        .kontainer h6{
+            font-size: 15px;
+            padding-bottom: 2px;
+            color: #fff;
+            font-weight: 400;          
+        }
+        .kontainer .kard .kard-title p {
+            font-size: 14px;
+            padding: 0 5px;
+            color: #fff;
+        }
+
+        .kontainer .kard .kard-title p span{
+            font-size: 30px;
+            padding: 0 5px;
+            color: #fff;
+        }
+
+        .kontainer .kard .kard-content ul{
+            padding: 5px 15px;
+            padding-bottom: 2px;
+            justify-items: center;
+        }
+
+        .kontainer .kard .kard-content ul li{
+            list-style: none;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .kontainer .kard .kard-content ul li i{
+            margin-right: 4px;
+            align-content: center;
+        }
+
+        .kontainer .kard .kard-content button{
+            width: 150px;
+            height: 40px;
+            padding: 10px 20px;
+            background: #00de55;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .kontainer .kard .kard-content button:hover{
+            background: #00de55;
+            box-shadow: 0 0 15px #fff;
+        }
+
+        .kontainer .kard .kard-content button a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        #yes{
+            color: rgb(45, 255, 45);
+        }
+        #no{
+            color: rgb(255, 68, 68);
+        }
+        #menu a{
+            color: #053B49;
+        }
+        #teste button{
+            color: #FF914D;
+        }
+        #teste button:hover{
+            color: #fff;
+        }
+        #trial h2{
+            margin-top: 80px;
+        }
+        #trial p{
+            text-align: center;
+            margin-top: 1px;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            top: 0;
+        }
+       
+        #form{
+            background: #ffffff6e;
+            border: 2px solid #FF914D;
+            border-radius: 25px;
+            box-shadow: 0 0 10px #9b9b9b;
+            max-width: 500px;
+            width: 100%;  
+            height: auto;
+            padding: 20px 30px;
+            justify-content: center;  
+            align-content: center;
+            text-align: center;
+        }
+
+         /* Responsive container */
+         @media screen and (max-width: 900px){
+            #form{
+                box-shadow: none;
+                border: none; 
+            }
+            #trial h2{
+                font-size: 2em;
+                line-height: 40px;
+            }
+            #trial h2 span{
+                font-size: 1.2em;
+            }
+        }
+             
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+        }
+        .form-step h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FF914D;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #053B49;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #053B49;
+            background-color: transparent;
+            color: #053B49;
+            border-radius: 25px;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            display: inline;
+            width: 48%;
+            padding: 10px;
+            background: transparent;
+            color: #ff914d;
+            border: #ff914d solid 1px;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: 400;
+            cursor: pointer;
+            margin-top: -3px;
+        }
+        .btn:hover {
+            background: #f47e35;
+            box-shadow: 0 0 10px #ff914d;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .btn:disabled {
+            background: #ddd;
+            cursor: not-allowed;
+        }
+        .progress-bar {
+            height: 5px;
+            background: #ff914d;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 0;
+        }
+        #help{
+            background-color: transparent;
+            width: 100%;
+            height: 50px;
+            font-size: 20px;
+            font-weight: 350;
+            border-radius: 15px;
+            padding: 10px;
+            color: #053B49;
+            border: 1px solid #053B49;
+        }
+        #free-trial button{
+            width: 180px;
+            height: 30px;
+            margin-right: 25px;
+            margin-bottom: 2px;
+            font-size: 18px;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            border-radius: 25px;
+            color: #fff;
+            cursor: pointer;
+            transition: .5s;
+        }
+        #free-trial button:hover{
+            background-color: #ff914d;
+            border: none;
+            color: #fff;
+        }
+
+        /* btn Enviar */
+        .btn-next{
+            display: inline;
+            width: 48%;
+            padding: 10px;
+            background: #FF914D;
+            color: #fff;
+            border: #ff914d solid 1px;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: -3px;
+            transition: .3s;
+        }
+        .btn-next:hover{
+            transform: scale(1.1);
+        }
+
+        #reportbook{
+            display: flex;
+            align-items: center;
+        }
+        #reportbook2{
+            display: flex;
+            align-items: center;
+            margin-bottom: 200px;
+        }
+        #reportcontent{
+            text-align: center;
+            color: #053B49;
+        }
+        #reportcontent span{
+            color: #FF914D;
+            text-align: center;
+        }
+        
+
+        #qpics{
+            width: 100px;
+        }
+
+        #reportpic{
+            width: 300px;
+            /* align-items: center;
+            justify-content: center;
+            left: 50%; */
+        }
+        #consult{
+            text-align: center;
+            color: #053B49;
+            font-size: 10px;
+            margin-top: 50px;
+        }
+        #terms{
+            text-decoration: underline;
+            cursor: pointer;
+            color: #053B49;
+        }
+        #terms:hover{
+            color: #FF914D;
+        }
+        #formMessage{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: #fff;"> 
+
+    <header id="header">
+
+        <div class="interface">
+
+            <section class="logo">
+                <a href="index.html"><img class="logo-white" src="images/logo_.png" alt="Yailup"></a>
+                <a href="index.html"><img class="logo-color" src="images/logo_.png" alt="Yailup"></a>
+            </section> 
+
+            <section class="menu-desktop">
+                <nav>
+                    <ul>
+                        <li><a id="menunav" href="index.html#home">Início</a></li>
+                        <li><a id="menunav" href="index.html#about">Quem somos</a></li>
+                        <li><a id="menunav" href="index.html#what">O que fazemos</a></li>
+                        <li><a id="menunav" href="index.html#how">Como fazemos</a></li>
+                        <li><a id="menunav" href="index.html#contact">Fale Conosco</a></li>
+                        <!-- <li><a id="menunav" href="#blog">Blog</a></li> -->
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="btn-contato">
+                <a href="free-trial.html">
+                    <button id="trailbtn">Teste GRÁTIS!</button>
+                </a>
+            </section>
+
+            <div class="btn-menu-mob" id="btn-menu-mob">
+                <div class="line-menumob-1"></div>
+                <div class="line-menumob-2"></div>
+                <div class="line-menumob-3"></div>
+            </div>
+
+            <section class="menu-mobile" id="menu-mobile">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home">Início</a></li>
+                        <li><a href="index.html#about">Quem somos</a></li>
+                        <li><a href="index.html#what">O que fazemos</a></li>
+                        <li><a href="index.html#how">Como fazemos</a></li>
+                        <li><a href="index.html#contact">Fale Conosco</a></li>
+                        <!-- <li><a href="#blog">Blog</a></li> -->
+                    </ul>
+                </nav>
+            </section>
+
+
+        </div>
+
+    </header>
+
+    <!-- <section class="plans">
+
+        <div class="kontainer"> 
+            <div class="kard">
+                <div class="kard-title">
+                    <h2>Básico</h2>
+                    <h6><s>R$799,90</s></h6>
+                    <p>R$<Span>689,90</Span>/mês</p>
+                </div>
+                <div class="kard-content">
+                    <ul>
+                        <li><i class="fa fa-check-circle" id="yes"></i>1 Website</li>
+                        <li><i class="fa fa-check-circle" id="yes"></i>5 Gb Storage</li>
+                        <li><i class="fa fa-check-circle" id="yes"></i>1 Database</li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>Free Domain</s></li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>Professional Email</s></li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>24/7 Support</s></li>
+                    </ul>
+                    <button><a href="#">Selecionar</a></button>
+                </div>
+            </div>
+            <div class="kard">
+                <div class="kard-title">
+                    <h2>Intermediário</h2>
+                    <h6><s>R$999,90</s></h6>
+                    <p>R$<Span>889,90</Span>/mês</p>
+                </div>
+                <div class="kard-content">
+                    <ul>
+                        <li><i class="fa fa-check-circle" id="yes"></i>1 Website</li>
+                        <li><i class="fa fa-check-circle" id="yes"></i>5 Gb Storage</li>
+                        <li><i class="fa fa-check-circle" id="yes"></i>1 Database</li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>Free Domain</s></li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>Professional Email</s></li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>24/7 Support</s></li>
+                    </ul>
+                    <button><a href="#">Selecionar</a></button>
+                </div>
+            </div>
+            <div class="kard">
+                <div class="kard-title">
+                    <h2>Avançado</h2>
+                    <h6><s>1599,90</s></h6>
+                    <p>R$<Span>1289,90</Span>/mês</p>
+                </div>
+                <div class="kard-content">
+                    <ul>
+                        <li><i class="fa fa-check-circle" id="yes"></i>1 Website</li>
+                        <li><i class="fa fa-check-circle" id="yes"></i>5 Gb Storage</li>
+                        <li><i class="fa fa-check-circle" id="yes"></i>1 Database</li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>Free Domain</s></li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>Professional Email</s></li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>24/7 Support</s></li>
+                    </ul>
+                    <button><a href="#">Selecionar</a></button>
+                </div>
+            </div>
+            <div class="kard">
+                <div class="kard-title">
+                    <h2>Premium</h2>
+                    <h6><s>1999,90</s></h6>
+                    <p>R$<Span>1789,90</Span>/mês</p>
+                </div>
+                <div class="kard-content">
+                    <ul>
+                        <li><i class="fa fa-check-circle" id="yes"></i>1 Website</li>
+                        <li><i class="fa fa-check-circle" id="yes"></i>5 Gb Storage</li>
+                        <li><i class="fa fa-check-circle" id="yes"></i>1 Database</li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>Free Domain</s></li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>Professional Email</s></li>
+                        <li><i class="fa fa-times-circle" id="no"></i><s>24/7 Support</s></li>
+                    </ul>
+                    <button><a href="#">Selecionar</a></button>
+                </div>
+            </div>
+        </div>
+
+    </section> -->
+
+    <section class="about" id="trial">
+        <div class="interface">
+            <h2><span>Teste GRÁTIS!</span><br> Receba seu relatório em até <strong>5 dias!</strong></h2><br>
+            <p>Preencha o formulário abaixo que em menos de <b>24h</b> entraremos em contato.</p>
+        </div>
+    
+    </section> 
+
+    <main>
+        <section class="form" id="form">
+            <div class="container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <form id="customerForm" method="post" action="php/send.php">
+                    <div class="form-step active" data-step="1">
+                        <h2>Qual é o seu nome?</h2>
+                        <div class="form-group">
+                            <input type="text" id="name" name="nome" placeholder="Nome completo" required>
+                        </div>
+                        <button type="button" class="btn-next" onclick="nextStep()">Próximo ➟</button>
+                    </div>
+                    <div class="form-step" data-step="2">
+                        <h2>Qual é o seu email?</h2>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="E-mail" required>
+                        </div>
+                        <button type="button" class="btn" onclick="prevStep()">🠔 Anterior</button>
+                        <button type="button" class="btn-next" onclick="nextStep()">Próximo ➟</button>
+                    </div>
+                    <div class="form-step" data-step="3">
+                        <h2>Qual é o seu telefone?</h2>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Telefone" required>
+                        </div>
+                        <button type="button" class="btn" onclick="prevStep()">🠔 Anterior</button>
+                        <button type="button" class="btn-next" onclick="nextStep()">Próximo ➟</button>
+                    </div>
+                    <div class="form-step" data-step="4">
+                        <h2>Qual é o seu gênero?</h2>
+                        <div class="form-group">
+                            <select id="gender" name="gender" required>
+                                <option value="">Selecione</option>
+                                <option value="male">Masculino</option>
+                                <option value="female">Feminino</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn" onclick="prevStep()">🠔 Anterior</button>
+                        <button type="button" class="btn-next" onclick="nextStep()">Próximo ➟</button>
+                    </div>
+                    <div class="form-step" data-step="5">
+                        <h2>Qual é o nome do seu negócio?</h2>
+                        <div class="form-group">
+                            <input type="text" id="business_name" name="business_name" placeholder="Razão Social e nome fantasia" required>
+                        </div>
+                        <button type="button" class="btn" onclick="prevStep()">🠔 Anterior</button>
+                        <button type="button" class="btn-next" onclick="nextStep()">Próximo ➟</button>
+                    </div>
+                    <div class="form-step" data-step="6">
+                        <h2>Qual o CNPJ?</h2>
+                        <div class="form-group">
+                            <input type="text" id="cnpj" name="cnpj" placeholder="Digite apenas números" required>
+                        </div>
+                        <button type="button" class="btn" onclick="prevStep()">🠔 Anterior</button>
+                        <button type="button" class="btn-next" onclick="nextStep()">Próximo ➟</button>
+                    </div>
+                    <div class="form-step" data-step="7">
+                        <h2>Como podemos te ajudar?</h2>
+                        <div class="form-group">
+                            <textarea id="help" name="help" rows="4" placeholder="Descreva sua necessidade" required></textarea>
+                        </div>
+                        <button type="button" class="btn" onclick="prevStep()">🠔 Anterior</button>
+                        <button type="button" class="btn-next" onclick="nextStep()">Próximo ➟</button>
+                    </div>
+                    <div class="form-step" data-step="8">
+                        <h2>Por fim, diga como nos conheceu...</h2>
+                        <div class="form-group">
+                            <select id="source" name="source" required>
+                                <option value="">Selecione</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="linkedin">Linkedin</option>
+                                <option value="indication">Indicação</option>
+                                <option value="google">Pesquisa no Google</option>
+                                <option value="youtube">YouTube</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn" onclick="prevStep()">🠔 Anterior</button>
+                        <button type="submit" class="btn-next">Enviar</button>
+                    </div>
+                </form>
+                <div id="formMessage"></div>
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <!-- <main class="reportbook" id="reportbook">
+        
+        <div class="bookimg" id="bookimg">
+            <img id="reportpic" src="images/report.png">
+        </div>      
+    </main>
+
+    <main class="reportbook2" id="reportbook2">
+        <div>
+            <img src="images/10_diag.png" id="qpics"> <i id="plusicon" class="bi bi-plus"></i> <img src="images/20_flux.png" id="qpics"> <i id="plusicon" class="bi bi-plus"></i> <img src="images/30_action.png" id="qpics"> <i id="plusicon" class="bi bi-plus"></i> <img src="images/40_result.png" id="qpics">
+            <h2 id="reportcontent">Tudo isso <span>GRÁTIS*</span> em até 5 dias!</h2>
+            <p id="consult">*Consulte nossos <a href="terms.html" id="terms">Termos e Condições de Uso</a></p>
+        </div>  
+        
+    </main> -->
+
+    
+
+
+<!--Footer 1-->
+<footer class="footer1" id="rodape">
+    &copy; <span id="anoAtual"></span> Yailup - Soluções Operacionais.
+</footer>
+<!-- /Footer1 -->
+
+<!--Footer 2-->
+    <footer id="footer">
+        <div class="interface">
+            <section class="top-footer">
+
+                <a href="https://www.linkedin.com/company/yailup" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                <a href="https://www.instagram.com/yailup/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+                <a href="https://www.youtube.com/channel/UCnPAEcSoKhVrN--XwGxcVJg" target="_blank"><button><i class="bi bi-youtube"></i></button></a>
+            </section>
+
+            <section class="middle-footer">
+                <h1 id="footer-text">&copy; <span id="anoAtualz"></span> Yailup - Soluções Operacionais.</h1>
+                <h2>Filipe Oliveira MEI - CNPJ 40.664.197/0001-88</h2>
+
+                <p>
+                    <a href="terms.html" class="terms">Termos e Condições</a> <i class="bi bi-dot terms"></i>
+                    <a href="policy.html" class="terms">Política de Privacidade</a> <i class="bi bi-dot terms"></i>
+                    <a href="form_partner.html" class="terms">Seja um Parceiro</a>
+                </p>
+            </section>
+        </div>
+    </footer>
+<!--/Footer2-->
+
+<script>
+let currentStep = 1;
+const formSteps = document.querySelectorAll('.form-step');
+const progressBar = document.getElementById('progress-bar');
+
+function prevStep() {
+    const currentStepElement = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+    currentStepElement.classList.remove("active");
+    currentStep -= 1;
+    const prevStepElement = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+    prevStepElement.classList.add("active");
+}
+
+function nextStep() {
+    if (currentStep < formSteps.length) {
+        formSteps[currentStep - 1].classList.remove('active');
+        formSteps[currentStep].classList.add('active');
+        currentStep++;
+        updateProgressBar();
+    }
+}
+
+function updateProgressBar() {
+    progressBar.style.width = ((currentStep - 1) / (formSteps.length - 1)) * 100 + '%';
+}
+
+updateProgressBar();
+
+document.getElementById("customerForm").addEventListener("submit", function(event){
+    event.preventDefault(); // Evita o redirecionamento padrão do formulário
+
+    // Coletar os dados do formulário
+    var formData = new FormData(this);
+
+    // Enviar os dados via AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "php/send.php", true); // Arquivo PHP que processa o envio
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            document.getElementById("formMessage").innerHTML = '<p style="color: green;">Formulário enviado com sucesso!</p>';
+        } else {
+            document.getElementById("formMessage").innerHTML = '<p style="color: red;">Erro ao enviar o formulário. Tente novamente.</p>';
+        }
+    };
+
+    xhr.send(formData); // Envia os dados do formulário
+});
+</script>
+
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+
+</body>
+</html>
